@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Suomen nykytaide ry</title>
+    <style type="text/css">
+        body {
+            margin:40px auto;
+            max-width:650px;
+            line-height:1.6;
+            font-size:18px;
+            color:#444;
+            padding:0 10px;
+            background-color: #EEEEEE;
+        }
+        h1, h2, h3 {
+            line-height:1.2;
+        }
+        img {
+            max-width: 650px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src='/static/balls.png'>
+        <h1>Suomen nykytaide ry</h1>
+        <aside>Suomalaisen nykytaiteen ja audiovisuaalisen nykykulttuurin edistäjä.</aside>
+    </header>
+    <br><br>
+    <hr>
+    <h2>Nyt jos koskaan kannattaa ???</h2>
+    <p><strong>Helposti faktana pidettävä asia.</strong></p>
+    <p>Oletko koskaan miettinyt, ei tarvitse enää. Todistan nyt em. Asian todeksi näiden syiden takia:</p>
+    <ul>
+        <li>Kyllä</li>
+        <li>Joo kyllä se näin joo sen juuri on oltava</li>
+        <li>Joo joo joo joo</li>
+        <li><em>Kyllä</em> se <em>on</em> kato</li>
+        <li>Joo kyllä joo niin olikin</li>
+    </ul>
+
+    <h3>Ja aivan! Arvasit oikein:</h3>
+    <p>Myös <em>Sinä</em> voit liittyä mukaan. Jäsenyyteen liittyy maksu, eivätkä jäsenet saa juuri mitään <a href="/jäsenedut">etuuksia</a>. Täytä allaoleva lomake niin rupeamme luultavasti lähettelemään sinulle sähköposteja.</p>
+
+    <hr>
+    <h3>Jäsenhakemus</h3>
+    <form action="{% url 'members:apply' %}" method="post">
+        {% csrf_token %}
+        <input placeholder="Täydellinen nimi" required type="text" name="name" id="name" maxlength="255" />
+        <label for="name">Nimi</label>
+        <br />
+        <input placeholder="Kotipaikka" required type="text" name="place_of_residence" id="place_of_residence" maxlength="255" />
+        <label for="name">Kotipaikka</label>
+        <br />
+        <input placeholder="Sähköposti" required type="email" name="email_addr" id="email_addr"/>
+        <label for="name">Sähköposti</label>
+        <br />
+        <input type="submit" value="Lähetä" />
+    </form>
+
+    <hr>
+    <p>Koodia copypastettu mm. <a href="http://bettermotherfuckingwebsite.com/">täältä</a> ja <a href="https://en.wikipedia.org/wiki/Missionary_Church_of_Kopimism">copymixauksen</a> tulokset on <a href="https://github.com/hkotkanen/snyapp">täällä</a>.
