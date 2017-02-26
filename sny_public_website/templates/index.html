@@ -45,7 +45,7 @@
     <p>Myös <em>Sinä</em> voit liittyä mukaan. Jäsenyyteen liittyy maksu, eivätkä jäsenet saa juuri mitään <a href="/jäsenedut">etuuksia</a>. Täytä allaoleva lomake niin rupeamme luultavasti lähettelemään sinulle sähköposteja.</p>
 
     <hr>
-    <h3>Jäsenhakemus</h3>
+    <h3>Ja siitä</h3>
     <form action="{% url 'members:apply' %}" method="post">
         {% csrf_token %}
         <input placeholder="Täydellinen nimi" required type="text" name="name" id="name" maxlength="255" />
